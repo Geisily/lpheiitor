@@ -865,7 +865,7 @@ h2.light { color: var(--white); }
 
 .footer-logo-link { display: inline-block; margin-bottom: 20px; }
 .footer-logo-img {
-  height: 90px;
+  height: 130px;
   width: auto;
   display: block;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,.4));
@@ -975,6 +975,14 @@ h2.light { color: var(--white); }
   .about-badge { bottom: -14px; right: 18px; }
   .about-stats { grid-template-columns: repeat(3, 1fr); }
 
+  /* Sections — centrar títulos */
+  .services .container,
+  .conditions .container,
+  .testimonials .container,
+  .faq .container > *:not(.faq-grid) { text-align: center; }
+  .tags-wrap { justify-content: center; }
+  .conditions-hint { text-align: center; }
+
   /* Services */
   .services-grid { grid-template-columns: repeat(2, 1fr); }
 
@@ -983,14 +991,18 @@ h2.light { color: var(--white); }
 
   /* FAQ */
   .faq-inner { grid-template-columns: 1fr; gap: 32px; }
+  .faq-header { text-align: center; }
 
   /* Contact */
+  .contact-inner { text-align: center; }
   .contact-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .contact-sub { margin-top: -24px; }
 
   /* Footer */
   .footer-grid { grid-template-columns: 1fr; gap: 36px; text-align: center; }
   .footer-logo-link { display: block; }
-  .footer-logo-img { margin: 0 auto; }
+  .footer-logo-img { margin: 0 auto; height: 110px; }
+  .footer-brand p { max-width: 100%; }
   .footer-nav, .footer-contact { align-items: center; }
   .footer-contact a, .footer-contact span { justify-content: center; }
   .footer-bottom { text-align: center; }
@@ -1027,15 +1039,15 @@ h2.light { color: var(--white); }
   .about-photo img { max-height: 320px; }
 
   /* Sections */
-  section { padding: 72px 0; }
-  h2 { margin-bottom: 36px; font-size: clamp(1.9rem, 7vw, 2.6rem); }
+  section { padding: 64px 0; }
+  h2 { margin-bottom: 32px; font-size: clamp(1.9rem, 7vw, 2.6rem); }
 
   /* Services */
-  .services-grid { grid-template-columns: 1fr; max-width: 100%; }
+  .services-grid { grid-template-columns: 1fr; }
   .service-card { padding: 28px 22px; }
 
   /* Conditions tags */
-  .tags-wrap { gap: 8px; }
+  .tags-wrap { gap: 8px; justify-content: center; }
   .tag { font-size: .78rem; padding: 8px 14px; }
 
   /* Testimonials */
@@ -1045,13 +1057,15 @@ h2.light { color: var(--white); }
   .faq-item summary { font-size: .95rem; padding: 16px 18px; }
   .faq-answer { padding: 0 18px 16px; }
 
-  /* Contact */
-  .contact-card { padding: 28px 22px; }
+  /* Contact — wave + card fix */
+  .contact-wave-top svg { height: 60px; }
+  .contact-grid { max-width: 100%; }
+  .contact-card { padding: 28px 20px; }
 
   /* Footer */
   .footer { padding: 48px 0 0; }
-  .footer-grid { gap: 28px; }
-  .footer-logo-img { height: 74px; }
+  .footer-grid { gap: 24px; }
+  .footer-logo-img { height: 90px; }
   .footer-nav a, .footer-contact a, .footer-contact span { font-size: .88rem; }
 
   /* Modal */
@@ -1064,4 +1078,5 @@ h2.light { color: var(--white); }
   .photo-blob { width: 220px; height: 220px; }
   .about-stats { grid-template-columns: 1fr; }
   .hero-actions .btn { max-width: 100%; }
+  .footer-logo-img { height: 76px; }
 }
