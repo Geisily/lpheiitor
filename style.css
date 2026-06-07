@@ -1152,8 +1152,9 @@ h2.light { color: var(--white); }
   .faq-answer { padding: 0 18px 16px; }
 
   /* Contact */
-  .contact-inner { padding: 0 24px; }
-  .contact-sub { font-size: .92rem; }
+  .contact { padding: 40px 0 0; }
+  .contact-inner { padding: 0 24px; text-align: center; }
+  .contact-sub { font-size: .92rem; text-align: center; margin-bottom: 40px; }
   .contact-map { height: 250px; min-height: 250px; }
   .contact-map iframe { min-height: 250px; }
   .contact-form-wrap { padding: 28px 20px; }
