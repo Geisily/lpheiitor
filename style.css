@@ -1122,7 +1122,8 @@ h2.light { color: var(--white); }
   .hero-social { gap: 18px; }
 
   /* About */
-  .about-photo { display: none; }
+  .about-photo { max-width: 320px; margin: 0 auto; overflow: hidden; border-radius: 24px; }
+  .about-photo img { max-height: 260px; width: 100%; object-fit: cover; object-position: center 40%; border-radius: 24px; }
   .about-stats { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
   .about-stats .stat { align-items: center; }
   .about-content { text-align: center; }
