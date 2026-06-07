@@ -3,6 +3,8 @@
    ===================== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+section[id] { scroll-margin-top: 80px; }
+
 :root {
   --navy:    #0E274F;
   --navy2:   #1E4D7E;
@@ -20,7 +22,7 @@
   --spring:  cubic-bezier(.34,1.56,.64,1);
 }
 
-html { scroll-behavior: smooth; font-size: 18px; }
+html { scroll-behavior: smooth; font-size: 18px; scroll-padding-top: 80px; }
 body { font-family: 'Nunito', sans-serif; color: var(--txt); background: var(--white); overflow-x: hidden; line-height: 1.7; }
 
 img { display: block; max-width: 100%; }
@@ -1127,7 +1129,8 @@ h2.light { color: var(--white); }
   .about-content p { text-align: justify; hyphens: auto; }
 
   /* Sections */
-  section { padding: 60px 0; }
+  section { padding: 96px 0 60px; }
+  section[id] { scroll-margin-top: 70px; }
   h2 { margin-bottom: 28px; font-size: clamp(1.8rem, 7vw, 2.4rem); }
 
   /* Services */
