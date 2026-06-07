@@ -14,8 +14,10 @@
   --off:     #f4f7fc;
   --txt:     #0E274F;
   --muted:   #557;
+  --body-c:  #3a4a66;
   --r:       22px;
   --ease:    cubic-bezier(.25,.46,.45,.94);
+  --spring:  cubic-bezier(.34,1.56,.64,1);
 }
 
 html { scroll-behavior: smooth; font-size: 18px; }
@@ -595,6 +597,93 @@ h2.light { color: var(--white); }
 }
 
 /* =====================
+   PARALLAX HERO LAYER
+   ===================== */
+.hero-parallax {
+  position: absolute; inset: 0; pointer-events: none;
+  will-change: transform;
+}
+
+/* =====================
+   DEPOIMENTOS
+   ===================== */
+.testimonials {
+  background: var(--off);
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+.testimonials h2 { margin-top: 10px; }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.testi-card {
+  background: var(--white);
+  border: 1.5px solid var(--pale);
+  border-radius: var(--r);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform .4s var(--spring), box-shadow .4s var(--ease), border-color .3s;
+  will-change: transform;
+}
+.testi-card:hover {
+  box-shadow: 0 24px 60px rgba(14,39,79,.12);
+  border-color: var(--blue);
+}
+
+.testi-stars { color: #f7b731; font-size: 1.1rem; letter-spacing: 2px; }
+
+.testi-card blockquote { flex: 1; }
+.testi-card blockquote p {
+  font-size: .88rem;
+  color: var(--body-c);
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+.testi-card blockquote p:last-child { margin-bottom: 0; }
+
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--pale);
+}
+
+.testi-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-weight: 900;
+  font-size: 1.1rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.testi-avatar--t  { background: #1E4D7E; }
+.testi-avatar--s2 { background: #6DA6D7; }
+
+.testi-author strong { display: block; font-size: .9rem; color: var(--navy); font-weight: 800; }
+.testi-author span   { font-size: .72rem; color: var(--body-c); }
+
+.testi-source {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: .8rem;
+  color: var(--body-c);
+}
+.testi-source strong { color: var(--navy); }
+
+/* =====================
    CITYBAR
    ===================== */
 .citybar {
@@ -830,24 +919,27 @@ h2.light { color: var(--white); }
    ===================== */
 .fade-up {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity .7s var(--ease), transform .7s var(--ease);
+  transform: translateY(48px);
+  transition: opacity .75s var(--ease), transform .85s var(--spring);
 }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
 
 .fade-right {
   opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity .7s var(--ease), transform .7s var(--ease);
+  transform: translateX(-56px);
+  transition: opacity .75s var(--ease), transform .85s var(--spring);
 }
 .fade-right.visible { opacity: 1; transform: translateX(0); }
 
 .fade-left {
   opacity: 0;
-  transform: translateX(50px);
-  transition: opacity .7s var(--ease), transform .7s var(--ease);
+  transform: translateX(56px);
+  transition: opacity .75s var(--ease), transform .85s var(--spring);
 }
 .fade-left.visible { opacity: 1; transform: translateX(0); }
+
+/* hero photo parallax — transition only for fade-in, not continuous scroll */
+.hero-photo.visible { transition: opacity .75s var(--ease); }
 
 /* =====================
    RESPONSIVE

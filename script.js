@@ -14,13 +14,32 @@ mobileMenu.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => mobileMenu.classList.remove('open'));
 });
 
-// Scroll animations
-const animEls = document.querySelectorAll('.hero-text, .hero-photo, .about-photo, .about-content, .service-card, .about-stats, .contact-card, .tag, h2, .section-chip, .contact-sub');
+// Parallax hero
+const heroPhoto = document.querySelector('.hero-photo');
+const heroSection = document.querySelector('.hero');
+if (heroPhoto && heroSection) {
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const scrolled = window.scrollY;
+        const heroH = heroSection.offsetHeight;
+        if (scrolled < heroH * 1.5) {
+          heroPhoto.style.transform = `translateY(${scrolled * 0.18}px)`;
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+}
 
-animEls.forEach((el, i) => {
-  const delay = (i % 4) * 0.1;
-  el.style.transitionDelay = delay + 's';
+// Scroll animations — staggered per section
+const animEls = document.querySelectorAll(
+  '.hero-text, .hero-photo, .about-photo, .about-content, .service-card, .about-stats, .contact-card, .tag, h2, .section-chip, .contact-sub, .testi-card, .faq-item'
+);
 
+animEls.forEach((el) => {
   const type = el.classList.contains('hero-photo') || el.classList.contains('about-content') ? 'fade-left'
              : el.classList.contains('about-photo') ? 'fade-right'
              : 'fade-up';
@@ -30,13 +49,36 @@ animEls.forEach((el, i) => {
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
+      // stagger siblings within the same parent
+      const siblings = [...(e.target.parentElement?.children || [])].filter(
+        c => c.classList.contains('fade-up') || c.classList.contains('fade-left') || c.classList.contains('fade-right')
+      );
+      const idx = siblings.indexOf(e.target);
+      e.target.style.transitionDelay = (idx * 0.09) + 's';
       e.target.classList.add('visible');
       observer.unobserve(e.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.fade-up, .fade-right, .fade-left').forEach(el => observer.observe(el));
+
+// Card tilt micro-interaction
+function addTilt(selector) {
+  document.querySelectorAll(selector).forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width  - 0.5;
+      const y = (e.clientY - r.top)  / r.height - 0.5;
+      card.style.transform = `perspective(700px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-6px) scale(1.02)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+}
+addTilt('.service-card');
+addTilt('.testi-card');
 
 // Modal de doenças
 const doencas = {
