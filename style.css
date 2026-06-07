@@ -1118,7 +1118,8 @@ h2.light { color: var(--white); }
   .hero-social { gap: 18px; }
 
   /* About */
-  .about-stats { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .about-stats { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+  .about-stats .stat { align-items: center; }
   .about-photo img { max-height: 300px; }
 
   /* Sections */
