@@ -760,8 +760,8 @@ h2.light { color: var(--white); }
    CITYBAR
    ===================== */
 .citybar {
-  background: var(--white);
-  border-bottom: 1px solid var(--pale);
+  background: var(--navy);
+  border-bottom: 1px solid rgba(109,166,215,.2);
   padding: 10px 0;
   position: relative;
   z-index: 99;
@@ -783,7 +783,7 @@ h2.light { color: var(--white); }
   font-weight: 800;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--navy2);
+  color: rgba(217,224,240,.75);
   white-space: nowrap;
 }
 
@@ -795,7 +795,7 @@ h2.light { color: var(--white); }
 .citybar-cities span {
   font-size: .82rem;
   font-weight: 700;
-  color: var(--navy);
+  color: rgba(255,255,255,.9);
   position: relative;
   cursor: default;
 }
