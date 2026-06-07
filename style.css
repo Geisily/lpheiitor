@@ -1123,7 +1123,10 @@ h2.light { color: var(--white); }
 
   /* Citybar */
   .citybar { padding: 8px 0; }
-  .citybar-label { font-size: .64rem; }
+  .citybar-label {
+    font-size: .8rem;
+    color: var(--yellow);
+  }
   .citybar-cities span { font-size: .74rem; }
 
   /* Herói */
@@ -1180,8 +1183,8 @@ h2.light { color: var(--white); }
   .contact-inner { padding: 0 24px; text-align: center; }
   .contact-sub { font-size: .92rem; text-align: center; margin-bottom: 40px; }
   .contact-body { gap: 22px; }
-  .contact-map { height: 230px; min-height: 230px; border-radius: 20px 20px 0 0; overflow: hidden; }
-  .contact-map iframe { min-height: 230px; }
+  .contact-map { height: 220px; min-height: 220px; border-radius: 20px 20px 0 0; overflow: hidden; border: 1px solid rgba(255,255,255,.14); }
+  .contact-map iframe { min-height: 220px; }
   .contact-form-wrap { padding: 28px 20px; }
   .contact-form input,
   .contact-form textarea { font-size: 1rem; }
