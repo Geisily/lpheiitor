@@ -101,13 +101,13 @@ const doencas = {
     sinais: ['Perda de peso com apetite aumentado', 'Agitação e vocalização excessiva', 'Vômitos e diarreia frequentes', 'Sede e urina aumentadas', 'Pelo áspero e descuidado']
   },
   cushing: {
-    icon: '🧪',
+    icon: '🧬',
     nome: 'Síndrome de Cushing',
     desc: 'O hipercortisolismo (Cushing) é causado pelo excesso de cortisol no organismo, seja por uma alteração na hipófise, nas adrenais ou pelo uso prolongado de corticoides. É mais frequente em cães de meia-idade a idosos e exige diagnóstico específico para o tratamento correto.',
     sinais: ['Barriga distendida ("barriga de sapo")', 'Queda de pelo simétrica', 'Sede e apetite excessivos', 'Pele fina com manchas escuras', 'Fraqueza muscular e letargia']
   },
   addison: {
-    icon: '⚠️',
+    icon: '🆘',
     nome: 'Doença de Addison',
     desc: 'O hipoadrenocorticismo (Addison) é o oposto do Cushing: as glândulas adrenais produzem hormônios insuficientes. Pode se manifestar de forma crônica ou em crises agudas (colapso adrenal), que são emergências. Com o tratamento adequado, o animal leva uma vida completamente normal.',
     sinais: ['Episódios de fraqueza e colapso', 'Vômitos e diarreia intermitentes', 'Perda de peso e apetite', 'Tremores e dor abdominal', 'Letargia progressiva']
@@ -119,7 +119,7 @@ const doencas = {
     sinais: ['Dificuldade de perder peso mesmo com dieta', 'Apatia e cansaço fácil', 'Intolerância ao exercício', 'Queda de pelo associada', 'Histórico de uso de corticoides']
   },
   reprodutivos: {
-    icon: '🔬',
+    icon: '🧬',
     nome: 'Distúrbios Reprodutivos',
     desc: 'Alterações hormonais podem afetar diretamente o sistema reprodutivo. A piómetra (infecção uterina), os cistos ovarianos e a hiperplasia prostática benigna são exemplos de condições ligadas a desequilíbrios hormonais — tratáveis com abordagem endocrinológica integrada.',
     sinais: ['Ciclos irregulares ou ausentes', 'Corrimento vaginal fora do cio', 'Aumento do abdômen em fêmeas', 'Dificuldade de urinar em machos', 'Comportamento alterado no cio']
@@ -137,7 +137,7 @@ const doencas = {
     sinais: ['Fraqueza muscular severa', 'Pescoço dobrado para baixo (gatos)', 'Pressão arterial elevada', 'Alterações oculares por hipertensão', 'Sede e urina aumentadas']
   },
   feocromocitoma: {
-    icon: '❤️',
+    icon: '💓',
     nome: 'Feocromocitoma',
     desc: 'Tumor da medula adrenal que secreta catecolaminas (adrenalina e noradrenalina) em excesso. Causa picos de pressão arterial, taquicardia e episódios agudos de crise. É mais raro, mas exige investigação quando o animal apresenta hipertensão de causa indeterminada.',
     sinais: ['Crises de agitação intensa', 'Pressão arterial muito elevada', 'Frequência cardíaca acelerada', 'Episódios de fraqueza ou síncope', 'Hemorragia ocular por hipertensão']
