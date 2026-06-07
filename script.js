@@ -1,10 +1,22 @@
-// Navbar scroll effect
+// =====================
+// INTERAÇÕES PRINCIPAIS
+// =====================
+// Este arquivo controla as principais interações da página:
+// - comportamento da barra de navegação ao rolar
+// - menu mobile
+// - efeito parallax leve no herói
+// - animações de entrada por seção
+// - efeito de tilt nos cards
+// - modal de doenças e FAQ
+// - envio de formulário via WhatsApp
+
+// Efeito da navbar ao rolar a página
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
-// Mobile menu
+// Menu mobile
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 hamburger.addEventListener('click', () => {
@@ -14,7 +26,7 @@ mobileMenu.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => mobileMenu.classList.remove('open'));
 });
 
-// Parallax hero
+// Parallax do herói
 const heroPhoto = document.querySelector('.hero-photo');
 const heroSection = document.querySelector('.hero');
 if (heroPhoto && heroSection) {
@@ -34,7 +46,7 @@ if (heroPhoto && heroSection) {
   }, { passive: true });
 }
 
-// Scroll animations — staggered per section
+// Animações de rolagem — aplicadas por seção com efeito em cascata
 const animEls = document.querySelectorAll(
   '.hero-text, .hero-photo, .about-photo, .about-content, .service-card, .about-stats, .contact-card, h2, .section-chip, .contact-sub, .testi-card, .faq-item'
 );
@@ -49,7 +61,7 @@ animEls.forEach((el) => {
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
-      // stagger siblings within the same parent
+      // aplica atraso progressivo entre irmãos dentro do mesmo contêiner
       const siblings = [...(e.target.parentElement?.children || [])].filter(
         c => c.classList.contains('fade-up') || c.classList.contains('fade-left') || c.classList.contains('fade-right')
       );
@@ -63,7 +75,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-up, .fade-right, .fade-left').forEach(el => observer.observe(el));
 
-// Card tilt micro-interaction
+// Efeito de tilt nos cards
 function addTilt(selector) {
   document.querySelectorAll(selector).forEach(card => {
     card.addEventListener('mousemove', e => {
@@ -80,7 +92,7 @@ function addTilt(selector) {
 addTilt('.service-card');
 addTilt('.testi-card');
 
-// Modal de doenças
+// Dados do modal de doenças
 const doencas = {
   diabetes: {
     icon: '🐕',
@@ -152,6 +164,7 @@ const modalSigns  = document.getElementById('modal-signs-list');
 const modalClose  = document.getElementById('modal-close');
 const backdrop    = document.getElementById('modal-backdrop');
 
+// Abre um modal com os detalhes da doença selecionada
 function openModal(key) {
   const d = doencas[key];
   if (!d) return;
@@ -174,7 +187,7 @@ document.querySelectorAll('.tag[data-doenca]').forEach(btn => {
 
 modalClose.addEventListener('click', closeModal);
 backdrop.addEventListener('click', closeModal);
-// FAQ Modal
+// Dados do FAQ
 const faqData = {
   animais: {
     icon: '🐾',
@@ -231,7 +244,7 @@ function sendToWhatsApp(e) {
   window.open(`https://api.whatsapp.com/send/?phone=%2B5513988156002&text=${encodeURIComponent(text)}&type=phone_number&app_absent=0`, '_blank');
 }
 
-// Smooth anchor offset for fixed navbar
+// Rolagem suave para âncoras, compensando a navbar fixa
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
