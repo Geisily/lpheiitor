@@ -953,86 +953,30 @@ h2.light { color: var(--white); }
 }
 
 .footer-grid {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 24px 40px 18px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  gap: 40px;
+  padding: 28px 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   border-bottom: 1px solid rgba(255,255,255,.07);
 }
 
-/* Coluna 1 — marca */
-.footer-brand { flex: 0 0 240px; max-width: 240px; }
-.footer-logo-link { display: inline-block; margin-bottom: 10px; }
-.footer-logo-img { height: 48px; width: auto; display: block; transition: transform .3s var(--spring); }
-.footer-logo-link:hover .footer-logo-img { transform: scale(1.04); }
-.footer-brand p { font-size: .8rem; line-height: 1.7; color: #94a3b8; margin-bottom: 12px; }
-
-/* Botões sociais com texto */
-.footer-social { display: flex; flex-direction: column; gap: 6px; }
-.footer-social a {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  color: #94a3b8;
-  font-size: .8rem;
-  padding: 5px 12px 5px 8px;
-  border-radius: 6px;
-  border: 1px solid rgba(255,255,255,.1);
-  background: rgba(255,255,255,.04);
-  white-space: nowrap;
-  transition: color .2s, border-color .2s, background .2s;
+/* 3 colunas iguais */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
-.footer-social a:hover { color: #fff; border-color: rgba(255,255,255,.25); background: rgba(255,255,255,.08); }
-.footer-social svg { opacity: .8; flex-shrink: 0; }
-
-/* Coluna nav — wrapper */
-.footer-nav-wrap { flex-shrink: 0; }
-.footer-nav-wrap h4 {
-  font-size: .62rem;
-  font-weight: 800;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--yellow);
-  margin: 0 0 10px 0;
-}
-.footer-nav-cols { display: flex; gap: 28px; align-items: flex-start; }
-.footer-nav { display: flex; flex-direction: column; gap: 0; }
-.footer-nav a {
-  display: block;
+.footer-col a,
+.footer-col span {
   color: #94a3b8;
-  font-size: .82rem;
+  font-size: .85rem;
   padding: 4px 0;
   white-space: nowrap;
   transition: color .2s, padding-left .15s;
 }
-.footer-nav a:hover { color: #cbd5e1; padding-left: 3px; }
-
-/* Coluna contato */
-.footer-contact { display: block; flex-shrink: 0; }
-.footer-contact h4 {
-  font-size: .62rem;
-  font-weight: 800;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--yellow);
-  margin: 0 0 10px 0;
-}
-.footer-contact a,
-.footer-contact span {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #94a3b8;
-  font-size: .82rem;
-  padding: 4px 0;
-  white-space: nowrap;
-  transition: color .2s;
-}
-.footer-contact a:hover { color: #cbd5e1; }
-.footer-contact svg { flex-shrink: 0; opacity: .75; }
+.footer-col a:hover { color: #cbd5e1; padding-left: 3px; }
 
 /* Copyright */
 .footer-bottom {
@@ -1145,15 +1089,8 @@ h2.light { color: var(--white); }
   .citybar-cities { flex-wrap: wrap; gap: 10px; }
 
   /* Footer */
-  .footer-grid { flex-direction: column; align-items: center; text-align: center; gap: 36px; padding: 56px 24px 40px; }
-  .footer-brand { flex: none; max-width: 100%; }
-  .footer-logo-link { display: block; }
-  .footer-logo-img { margin: 0 auto; }
-  .footer-social { justify-content: center; }
-  .footer-nav-wrap, .footer-contact { align-items: center; text-align: center; }
-  .footer-nav-cols { justify-content: center; }
-  .footer-nav a { text-align: center; }
-  .footer-contact a, .footer-contact span { justify-content: center; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; padding: 36px 24px 28px; text-align: center; }
+  .footer-col { align-items: center; }
   .footer-bottom { text-align: center; padding: 16px 24px; }
 }
 
@@ -1209,9 +1146,8 @@ h2.light { color: var(--white); }
   .contact-form textarea { font-size: 1rem; }
 
   /* Footer */
-  .footer-grid { gap: 32px; padding: 48px 18px 36px; }
-  .footer-logo-img { height: 32px; }
-  .footer-nav a, .footer-contact a, .footer-contact span { font-size: .88rem; }
+  .footer-grid { gap: 20px; padding: 32px 18px 24px; }
+  .footer-col a, .footer-col span { font-size: .88rem; }
 
   /* Modal */
   .modal-box { padding: 28px 20px; margin: 16px; max-height: 85vh; }
