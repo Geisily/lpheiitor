@@ -438,6 +438,7 @@ h2.light { color: var(--white); }
   position: relative;
 }
 .conditions h2 { margin-top: 10px; margin-bottom: 12px; }
+.conditions .container { text-align: center; }
 
 .conditions-hint {
   font-size: .82rem;
@@ -450,8 +451,9 @@ h2.light { color: var(--white); }
 .tags-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 14px;       /* row-gap column-gap */
+  gap: 12px 14px;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .tag {
