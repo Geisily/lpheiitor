@@ -460,16 +460,17 @@ h2.light { color: var(--white); }
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: var(--off);
+  background: #ffffff;
   color: var(--navy);
-  font-size: .88rem;
+  font-size: .92rem;
   font-weight: 700;
-  padding: 11px 22px;
+  padding: 13px 26px;
   border-radius: 100px;
-  border: 1.5px solid var(--pale);
+  border: 2px solid var(--blue);
   cursor: pointer;
   font-family: 'Nunito', sans-serif;
   white-space: nowrap;
+  box-shadow: 0 2px 12px rgba(14,39,79,.07);
   transition: background .22s var(--ease), color .22s, border-color .22s, transform .22s var(--spring), box-shadow .22s;
 }
 .tag:hover {
