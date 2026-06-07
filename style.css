@@ -957,7 +957,7 @@ h2.light { color: var(--white); }
   margin: 0 auto;
   padding: 24px 40px 18px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
   gap: 40px;
   border-bottom: 1px solid rgba(255,255,255,.07);
