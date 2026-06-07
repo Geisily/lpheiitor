@@ -378,10 +378,12 @@ h2.light { color: var(--white); }
   margin-bottom: -2px;
 }
 .wave-divider svg { width: 100%; height: 110px; display: block; }
-.wave-to-white    { background: var(--navy); }
-.wave-to-off      { background: var(--white); }
+.wave-to-white    { background: var(--navy); }     /* SVG fill: #ffffff */
+.wave-to-off      { background: var(--white); }    /* SVG fill: #f4f7fc */
 .wave-off-off     { background: var(--off); }
 .wave-off-navy    { background: var(--off); }      /* SVG fill: #0E274F */
+.wave-off-navy2   { background: var(--off); }      /* SVG fill: #1E4D7E */
+.wave-navy-off    { background: var(--navy); }     /* SVG fill: #f4f7fc */
 .wave-navy-navy2  { background: var(--navy); }     /* SVG fill: #1E4D7E */
 .wave-navy2-navy  { background: var(--navy2); }    /* SVG fill: #070f23 */
 
