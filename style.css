@@ -419,7 +419,7 @@ h2.light { color: var(--white); }
    ===================== */
 .conditions {
   background: var(--white);
-  padding: 120px 0;
+  padding: 72px 0 100px;
   position: relative;
 }
 .conditions h2 { margin-top: 10px; margin-bottom: 12px; }
@@ -989,7 +989,8 @@ h2.light { color: var(--white); }
 
   /* FAQ */
   .faq-inner { grid-template-columns: 1fr; gap: 32px; }
-  .faq-header { text-align: center; }
+  .faq-left { text-align: center; }
+  .faq-left .btn-faq { margin: 0 auto; }
 
   /* Contact */
   .contact-inner { text-align: center; }
