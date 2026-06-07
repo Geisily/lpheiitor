@@ -713,7 +713,7 @@ h2.light { color: var(--white); }
   border-color: var(--blue);
 }
 
-.testi-stars { color: #f7b731; font-size: 1.1rem; letter-spacing: 2px; text-align: center; align-self: center; }
+.testi-stars { color: #f7b731; font-size: 1.1rem; letter-spacing: 2px; width: 100%; text-align: center; display: block; }
 
 .testi-card blockquote { flex: 1; }
 .testi-card blockquote p {
