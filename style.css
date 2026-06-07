@@ -571,7 +571,7 @@ h2.light { color: var(--white); }
   background: var(--navy2);
   position: relative;
   overflow: hidden;
-  padding: 80px 0 100px;
+  padding: 72px 0 60px;
 }
 
 .contact-inner { text-align: center; }
@@ -955,7 +955,7 @@ h2.light { color: var(--white); }
 .footer-grid {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 40px 40px 28px;
+  padding: 28px 40px 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -1071,7 +1071,7 @@ h2.light { color: var(--white); }
 .footer-bottom {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 14px 40px;
+  padding: 10px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
