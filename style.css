@@ -721,6 +721,7 @@ h2.light { color: var(--white); }
   color: var(--body-c);
   line-height: 1.8;
   margin-bottom: 10px;
+  text-align: justify;
 }
 .testi-card blockquote p:last-child { margin-bottom: 0; }
 
