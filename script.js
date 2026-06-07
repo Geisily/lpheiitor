@@ -208,34 +208,28 @@ const faqData = {
   }
 };
 
-const faqModal    = document.getElementById('faq-modal');
-const faqMTitle   = document.getElementById('faq-modal-title');
-const faqMDesc    = document.getElementById('faq-modal-desc');
-const faqMIcon    = document.getElementById('faq-modal-icon');
-const faqMClose   = document.getElementById('faq-modal-close');
-const faqMBack    = document.getElementById('faq-modal-backdrop');
-
-function openFaqModal(key) {
-  const d = faqData[key];
-  if (!d) return;
-  faqMIcon.textContent  = d.icon;
-  faqMTitle.textContent = d.pergunta;
-  faqMDesc.textContent  = d.resposta;
-  faqModal.hidden = false;
-  document.body.style.overflow = 'hidden';
-}
-
-function closeFaqModal() {
-  faqModal.hidden = true;
-  document.body.style.overflow = '';
-}
-
-document.querySelectorAll('.faq-item[data-faq]').forEach(btn => {
-  btn.addEventListener('click', () => openFaqModal(btn.dataset.faq));
+// Accordion: fechar outros itens ao abrir um
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('toggle', () => {
+    if (item.open) {
+      document.querySelectorAll('.faq-item[open]').forEach(other => {
+        if (other !== item) other.removeAttribute('open');
+      });
+    }
+  });
 });
-faqMClose.addEventListener('click', closeFaqModal);
-faqMBack.addEventListener('click', closeFaqModal);
-document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closeFaqModal(); } });
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// Formulário WhatsApp
+function sendToWhatsApp(e) {
+  e.preventDefault();
+  const name = document.getElementById('cf-name').value.trim();
+  const pet  = document.getElementById('cf-pet').value.trim();
+  const msg  = document.getElementById('cf-msg').value.trim();
+  const text = `Olá, Dr. Heitor! Sou ${name}${pet ? `, tutor(a) de ${pet}` : ''}.\n\n${msg}`;
+  window.open(`https://api.whatsapp.com/send/?phone=%2B5513988156002&text=${encodeURIComponent(text)}&type=phone_number&app_absent=0`, '_blank');
+}
 
 // Smooth anchor offset for fixed navbar
 document.querySelectorAll('a[href^="#"]').forEach(a => {
