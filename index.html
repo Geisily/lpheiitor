@@ -86,6 +86,20 @@
     </div>
   </header>
 
+  <!-- BARRA DE CIDADES -->
+  <div class="citybar" aria-label="Área de atendimento">
+    <div class="citybar-inner">
+      <span class="citybar-label">Atendimento a domicílio em</span>
+      <div class="citybar-cities">
+        <span>Santos</span>
+        <span>São Vicente</span>
+        <span>Praia Grande</span>
+        <span>Guarujá</span>
+        <span>Cubatão</span>
+      </div>
+    </div>
+  </div>
+
   <main>
   <!-- HERO -->
   <section class="hero" id="hero" aria-label="Apresentação">
@@ -225,6 +239,47 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="faq" id="duvidas" aria-label="Dúvidas frequentes">
+    <div class="container faq-inner">
+      <div class="faq-left">
+        <span class="faq-label">— Dúvidas frequentes</span>
+        <h2>Ainda com<br>perguntas?</h2>
+        <p>As respostas mais comuns de quem está chegando agora. Não achou a sua? Chame no WhatsApp.</p>
+        <a href="https://api.whatsapp.com/send/?phone=%2B5513988156002&text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida+sobre+o+atendimento&type=phone_number&app_absent=0" class="btn-faq" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.12 1.524 5.855L0 24l6.336-1.508A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.66-.49-5.2-1.35l-.37-.22-3.84.915.93-3.74-.24-.385A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Falar com o Dr. Heitor
+        </a>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Quais animais o Dr. Heitor atende?<span class="faq-icon">+</span></summary>
+          <p>O atendimento é voltado para cães e gatos com suspeita ou diagnóstico de doenças hormonais e metabólicas. Casos de outras espécies podem ser avaliados individualmente.</p>
+        </details>
+        <details class="faq-item">
+          <summary>O que faz um veterinário endocrinologista?<span class="faq-icon">+</span></summary>
+          <p>É o especialista responsável por diagnosticar e tratar doenças do sistema hormonal dos animais, como diabetes, hipotireoidismo, síndrome de Cushing, doença de Addison e obesidade endócrina.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Como sei se meu pet precisa de um endocrinologista?<span class="faq-icon">+</span></summary>
+          <p>Sinais como sede excessiva, urina frequente, aumento ou perda de peso sem causa aparente, queda de pelo, barriga distendida ou cansaço excessivo são indicativos. O ideal é consultar para investigar.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Vocês acompanham casos de diabetes e insulina?<span class="faq-icon">+</span></summary>
+          <p>Sim. O acompanhamento de cães e gatos diabéticos é um dos principais focos do consultório — incluindo ajuste de dose de insulina, curvas glicêmicas e orientação ao tutor.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Onde é feito o atendimento?<span class="faq-icon">+</span></summary>
+          <p>100% domiciliar. O Dr. Heitor vai até a sua casa em Santos, São Vicente, Praia Grande, Guarujá ou Cubatão. Sem clínica, sem sala de espera.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Como faço para agendar?<span class="faq-icon">+</span></summary>
+          <p>Entre em contato pelo WhatsApp. O agendamento é feito diretamente, de forma rápida e simples, com confirmação de data, horário e endereço.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTATO -->
   <section class="contact" id="contato">
     <div class="contact-wave-top">
@@ -266,8 +321,39 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer" aria-label="Rodapé">
-    <p>© 2024 <em>Heitor Felippelli</em> · CRMV-SP 49255 · Veterinário Endocrinologista</p>
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo-text">Heitor Felippelli</span>
+        <span class="footer-logo-sub">Veterinário Endocrinologista · CRMV-SP 49255</span>
+        <p>Endocrinologia veterinária com cuidado humano. Diabetes, tireoide, Cushing e distúrbios hormonais em cães e gatos, na Baixada Santista.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegação do rodapé">
+        <h4>Navegação</h4>
+        <a href="#quem-sou">Sobre</a>
+        <a href="#servicos">Como funciona</a>
+        <a href="#condicoes">Atendimento</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <a href="https://www.instagram.com/heitorfelippellivet/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          @heitorfelippellivet
+        </a>
+        <a href="https://api.whatsapp.com/send/?phone=%2B5513988156002&text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta+domiciliar&type=phone_number&app_absent=0" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.12 1.524 5.855L0 24l6.336-1.508A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.66-.49-5.2-1.35l-.37-.22-3.84.915.93-3.74-.24-.385A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          WhatsApp para agendamento
+        </a>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Baixada Santista — SP
+        </span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Heitor Felippelli · CRMV-SP 49255</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
