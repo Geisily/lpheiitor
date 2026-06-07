@@ -38,6 +38,16 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-up, .fade-right, .fade-left').forEach(el => observer.observe(el));
 
+// FAQ: só uma pergunta aberta por vez
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+  item.addEventListener('toggle', () => {
+    if (item.open) {
+      faqItems.forEach(other => { if (other !== item) other.open = false; });
+    }
+  });
+});
+
 // Smooth anchor offset for fixed navbar
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {

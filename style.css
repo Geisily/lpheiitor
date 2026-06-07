@@ -390,21 +390,22 @@ h2.light { color: var(--white); }
 }
 
 .service-card {
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.1);
+  background: var(--white);
+  border: 1.5px solid var(--pale);
   border-radius: var(--r);
   padding: 44px 28px;
   text-align: center;
-  transition: background .3s var(--ease), transform .3s var(--ease), border-color .3s var(--ease);
+  transition: background .3s var(--ease), transform .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
 }
 .service-card:hover {
-  background: rgba(255,255,255,.14);
-  border-color: rgba(109,166,215,.38);
+  background: var(--white);
+  border-color: var(--blue);
   transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(14,39,79,.15);
 }
 .service-ico { font-size: 2.8rem; margin-bottom: 20px; }
-.service-card h3 { font-size: 1.05rem; font-weight: 800; color: var(--white); margin-bottom: 12px; }
-.service-card p  { font-size: .9rem; color: rgba(255,255,255,.62); line-height: 1.75; }
+.service-card h3 { font-size: 1.05rem; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+.service-card p  { font-size: .9rem; color: var(--body-c, #3a4a66); line-height: 1.75; }
 
 .services-wave { line-height: 0; }
 .services-wave svg { width: 100%; height: 90px; display: block; }
@@ -447,8 +448,9 @@ h2.light { color: var(--white); }
 .contact-wave-top { line-height: 0; }
 .contact-wave-top svg { width: 100%; height: 90px; display: block; }
 
-.contact-inner { text-align: center; }
+.contact-inner { text-align: center; padding-top: 20px; }
 .contact-sub { color: rgba(255,255,255,.68); font-size: 1.1rem; margin-top: -38px; margin-bottom: 60px; }
+.contact-inner .section-chip { border: 1px solid rgba(255,255,255,.2); }
 
 .contact-grid {
   display: grid;
