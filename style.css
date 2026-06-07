@@ -1066,8 +1066,8 @@ h2.light { color: var(--white); }
 
   /* Sobre */
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .about-photo { order: 1; max-width: 360px; margin: 0 auto; }
-  .about-content { order: 0; }
+  .about-photo { order: 0; max-width: 360px; margin: 0 auto; }
+  .about-content { order: 1; }
   .about-photo img { max-height: 320px; margin: 0 auto; object-position: top center; }
   .about-badge { bottom: -14px; right: 0px; }
   .about-stats { grid-template-columns: repeat(3, 1fr); }
@@ -1183,8 +1183,8 @@ h2.light { color: var(--white); }
   .contact-inner { padding: 0 24px; text-align: center; }
   .contact-sub { font-size: .92rem; text-align: center; margin-bottom: 40px; }
   .contact-body { gap: 22px; }
-  .contact-map { height: 220px; min-height: 220px; border-radius: 20px 20px 0 0; overflow: hidden; border: 1px solid rgba(255,255,255,.14); }
-  .contact-map iframe { min-height: 220px; }
+  .contact-map { height: 220px; min-height: 200px; border-radius: 20px 20px 0 0; overflow: hidden; border: 1px solid rgba(255,255,255,.14); }
+  .contact-map iframe { min-height: 200px; border-radius: 20px 20px 0 0; }
   .contact-form-wrap { padding: 28px 20px; }
   .contact-form input,
   .contact-form textarea { font-size: 1rem; }
