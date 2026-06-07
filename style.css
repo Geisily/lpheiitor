@@ -1079,6 +1079,8 @@ h2.light { color: var(--white); }
   .faq-left .btn-faq { margin: 0 auto; }
 
   /* Contact */
+  .contact-inner { padding: 0 28px; }
+  .contact-sub { font-size: .97rem; }
   .contact-body { grid-template-columns: 1fr; border-radius: 16px; }
   .contact-map { height: 280px; min-height: 280px; }
   .contact-map iframe { min-height: 280px; }
