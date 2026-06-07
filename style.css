@@ -571,7 +571,7 @@ h2.light { color: var(--white); }
   background: var(--navy2);
   position: relative;
   overflow: hidden;
-  padding: 72px 0 60px;
+  padding: 72px 0 0;
 }
 
 .contact-inner { text-align: center; }
@@ -582,7 +582,7 @@ h2.light { color: var(--white); }
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1240px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   gap: 0;
   border-radius: 20px;
   overflow: hidden;
