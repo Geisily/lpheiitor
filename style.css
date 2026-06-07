@@ -368,6 +368,13 @@ h2.light { color: var(--white); }
 .about-wave { line-height: 0; }
 .about-wave svg { width: 100%; height: 90px; display: block; }
 
+/* Generic wave dividers between sections */
+.wave-divider { line-height: 0; display: block; }
+.wave-divider svg { width: 100%; display: block; }
+.wave-to-white  { background: var(--navy); }
+.wave-to-off    { background: var(--white); }
+.wave-off-off   { background: var(--off); }
+
 /* =====================
    SERVICES
    ===================== */
@@ -540,7 +547,7 @@ h2.light { color: var(--white); }
   padding-bottom: 120px;
 }
 .contact-wave-top { line-height: 0; }
-.contact-wave-top svg { width: 100%; height: 90px; display: block; }
+.contact-wave-top svg { width: 100%; height: 110px; display: block; }
 
 .contact-inner { text-align: center; padding-top: 20px; }
 .contact-sub { color: rgba(255,255,255,.68); font-size: 1.1rem; margin-top: -38px; margin-bottom: 60px; }
@@ -554,13 +561,13 @@ h2.light { color: var(--white); }
 
 .contact-card {
   display: block;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.13);
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.28);
   border-radius: var(--r);
   padding: 52px 28px;
   transition: background .3s var(--ease), transform .3s var(--ease), border-color .3s var(--ease);
 }
-.contact-card:hover { background: rgba(255,255,255,.16); border-color: rgba(109,166,215,.4); transform: translateY(-10px); }
+.contact-card:hover { background: rgba(255,255,255,.26); border-color: rgba(109,166,215,.6); transform: translateY(-10px); }
 
 .contact-ico { color: var(--blue); margin-bottom: 20px; display: flex; justify-content: center; }
 .contact-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--white); margin-bottom: 10px; }
