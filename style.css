@@ -533,7 +533,7 @@ h2.light { color: var(--white); }
 }
 .modal-close:hover { background: var(--pale); border-color: var(--blue); }
 
-.modal-icon { font-size: 3rem; margin-bottom: 16px; line-height: 1; }
+.modal-icon { font-size: 3rem; margin-bottom: 16px; line-height: 1; text-align: center; }
 .modal-box h3 { font-size: 1.5rem; font-weight: 900; color: var(--navy); margin-bottom: 14px; }
 .modal-box > p { font-size: .95rem; color: var(--body-c, #3a4a66); line-height: 1.8; margin-bottom: 24px; }
 
