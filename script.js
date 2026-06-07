@@ -36,7 +36,7 @@ if (heroPhoto && heroSection) {
 
 // Scroll animations — staggered per section
 const animEls = document.querySelectorAll(
-  '.hero-text, .hero-photo, .about-photo, .about-content, .service-card, .about-stats, .contact-card, .tag, h2, .section-chip, .contact-sub, .testi-card, .faq-item'
+  '.hero-text, .hero-photo, .about-photo, .about-content, .service-card, .about-stats, .contact-card, h2, .section-chip, .contact-sub, .testi-card, .faq-item'
 );
 
 animEls.forEach((el) => {
