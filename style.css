@@ -50,6 +50,8 @@ a  { text-decoration: none; }
   margin-bottom: 18px;
 }
 .section-chip.light { background: rgba(255,255,255,.18); color: var(--white); }
+.section-chip--link { cursor: pointer; transition: background .25s, transform .2s; }
+.section-chip--link:hover { background: rgba(255,255,255,.32); transform: translateY(-2px); }
 
 h2 {
   font-family: 'Nunito', sans-serif;
