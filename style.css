@@ -589,11 +589,12 @@ h2.light { color: var(--white); }
 }
 
 .contact-map {
-  min-height: 420px;
   display: flex;
   flex-direction: column;
+  align-self: stretch;
+  height: 100%;
 }
-.contact-map iframe { width: 100%; flex: 1; display: block; min-height: 420px; }
+.contact-map iframe { width: 100%; flex: 1; display: block; min-height: 500px; }
 
 .contact-form-wrap {
   background: #ffffff;
