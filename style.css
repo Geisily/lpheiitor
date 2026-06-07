@@ -90,7 +90,7 @@ h2.light { color: var(--white); }
 .logo-script {
   font-family: 'Dancing Script', cursive;
   font-size: 1.7rem;
-  color: var(--white);
+  color: var(--yellow);
   line-height: 1;
 }
 .logo-tagline {
@@ -872,7 +872,7 @@ h2.light { color: var(--white); }
   display: block;
   font-family: 'Dancing Script', cursive;
   font-size: 1.8rem;
-  color: var(--white);
+  color: var(--yellow);
   line-height: 1;
   margin-bottom: 4px;
 }
