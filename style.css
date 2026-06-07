@@ -71,12 +71,13 @@ h2.light { color: var(--white); }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 200;
+  background: var(--navy);
   transition: background .35s var(--ease), box-shadow .35s var(--ease);
 }
 .navbar.scrolled {
-  background: rgba(14,39,79,.97);
+  background: rgba(7,15,35,.97);
   backdrop-filter: blur(14px);
-  box-shadow: 0 4px 32px rgba(14,39,79,.3);
+  box-shadow: 0 4px 32px rgba(7,15,35,.4);
 }
 
 .nav-inner {
