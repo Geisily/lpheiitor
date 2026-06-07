@@ -729,6 +729,7 @@ h2.light { color: var(--white); }
 .testi-author {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   padding-top: 16px;
   border-top: 1px solid var(--pale);
