@@ -793,13 +793,16 @@ h2.light { color: var(--white); }
 }
 
 .faq-label {
-  display: block;
-  font-size: .72rem;
+  display: inline-block;
+  font-size: .82rem;
   font-weight: 800;
-  letter-spacing: .14em;
+  letter-spacing: .16em;
   text-transform: uppercase;
-  color: var(--blue);
-  margin-bottom: 18px;
+  color: var(--navy);
+  background: var(--yellow);
+  padding: 7px 18px;
+  border-radius: 100px;
+  margin-bottom: 22px;
 }
 
 .faq-left h2 {
