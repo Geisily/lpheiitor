@@ -1072,6 +1072,7 @@ h2.light { color: var(--white); }
 
   /* Testimonials */
   .testimonials-grid { grid-template-columns: 1fr; max-width: 540px; margin: 0 auto; }
+  .testi-source { margin-top: 32px; justify-content: center; width: 100%; max-width: 540px; margin-left: auto; margin-right: auto; }
 
   /* FAQ */
   .faq-inner { grid-template-columns: 1fr; gap: 32px; }
