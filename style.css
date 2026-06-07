@@ -372,14 +372,19 @@ h2.light { color: var(--white); }
 .about-wave svg { width: 100%; height: 90px; display: block; }
 
 /* Generic wave dividers between sections */
-.wave-divider { line-height: 0; display: block; }
-.wave-divider svg { width: 100%; display: block; }
+.wave-divider {
+  line-height: 0;
+  display: block;
+  overflow: hidden;
+  margin-bottom: -2px; /* elimina gap de subpixel */
+}
+.wave-divider svg { width: 100%; height: auto; display: block; }
 .wave-to-white    { background: var(--navy); }
 .wave-to-off      { background: var(--white); }
 .wave-off-off     { background: var(--off); }
-.wave-off-navy    { background: var(--off); }
-.wave-navy-navy2  { background: var(--navy); }
-.wave-navy2-navy  { background: var(--navy2); }
+.wave-off-navy    { background: var(--off); }      /* SVG fill: #0E274F */
+.wave-navy-navy2  { background: var(--navy); }     /* SVG fill: #1E4D7E */
+.wave-navy2-navy  { background: var(--navy2); }    /* SVG fill: #070f23 */
 
 /* =====================
    SERVICES
@@ -438,20 +443,28 @@ h2.light { color: var(--white); }
   margin-bottom: 36px;
 }
 
-.tags-wrap { display: flex; flex-wrap: wrap; gap: 14px; }
+.tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;       /* row-gap column-gap */
+  align-items: flex-start;
+}
 
 .tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   background: var(--off);
   color: var(--navy);
-  font-size: .9rem;
+  font-size: .88rem;
   font-weight: 700;
-  padding: 12px 26px;
+  padding: 11px 22px;
   border-radius: 100px;
   border: 1.5px solid var(--pale);
   cursor: pointer;
   font-family: 'Nunito', sans-serif;
-  transition: background .25s, color .25s, border-color .25s, transform .25s, box-shadow .25s;
+  white-space: nowrap;
+  transition: background .22s var(--ease), color .22s, border-color .22s, transform .22s var(--spring), box-shadow .22s;
 }
 .tag:hover {
   background: var(--navy);
@@ -460,6 +473,7 @@ h2.light { color: var(--white); }
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(14,39,79,.18);
 }
+.tag:active { transform: translateY(-1px); }
 
 /* =====================
    MODAL DOENÇAS
@@ -837,26 +851,27 @@ h2.light { color: var(--white); }
    ===================== */
 .footer {
   background: #070f23;
-  color: rgba(255,255,255,.65);
+  color: rgba(255,255,255,.72);
   font-size: .88rem;
 }
 
 .footer-grid {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 64px 40px 48px;
+  padding: 72px 40px 52px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 48px;
-  border-bottom: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(255,255,255,.12);
 }
 
+/* Coluna 1 — marca */
 .footer-brand {
-  flex: 0 0 320px;
-  max-width: 320px;
+  flex: 0 0 300px;
+  max-width: 300px;
 }
-.footer-logo-link { display: inline-block; margin-bottom: 16px; }
+.footer-logo-link { display: inline-block; margin-bottom: 18px; }
 .footer-logo-img {
   height: 30px;
   width: auto;
@@ -866,40 +881,51 @@ h2.light { color: var(--white); }
 .footer-logo-link:hover .footer-logo-img { transform: scale(1.04); }
 .footer-brand p {
   font-size: .85rem;
-  line-height: 1.85;
-  color: rgba(255,255,255,.58);
+  line-height: 1.9;
+  color: rgba(255,255,255,.62);
 }
 
-.footer-nav, .footer-contact {
+/* Colunas 2 e 3 — nav + contato */
+.footer-nav,
+.footer-contact {
   display: flex;
   flex-direction: column;
-  gap: 12px;
   align-items: flex-start;
+  gap: 10px;
 }
-.footer-nav h4, .footer-contact h4 {
-  font-size: .72rem;
+.footer-nav h4,
+.footer-contact h4 {
+  font-size: .7rem;
   font-weight: 800;
-  letter-spacing: .14em;
+  letter-spacing: .15em;
   text-transform: uppercase;
   color: var(--white);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
-.footer-nav a, .footer-contact a, .footer-contact span {
-  color: rgba(255,255,255,.6);
-  font-size: .88rem;
-  transition: color .2s;
+.footer-nav a,
+.footer-contact a,
+.footer-contact span {
   display: flex;
   align-items: center;
   gap: 8px;
+  color: rgba(255,255,255,.62);
+  font-size: .87rem;
+  line-height: 1.5;
+  transition: color .2s;
 }
-.footer-nav a:hover, .footer-contact a:hover { color: var(--white); }
+.footer-nav a:hover,
+.footer-contact a:hover { color: var(--white); }
 
+/* Linha copyright */
 .footer-bottom {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 20px 40px;
+  padding: 22px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: .75rem;
-  color: rgba(255,255,255,.28);
+  color: rgba(255,255,255,.3);
 }
 
 /* =====================
