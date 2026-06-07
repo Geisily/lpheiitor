@@ -535,7 +535,7 @@ h2.light { color: var(--white); }
 
 .modal-icon { font-size: 3rem; margin-bottom: 16px; line-height: 1; text-align: center; }
 .modal-box h3 { font-size: 1.5rem; font-weight: 900; color: var(--navy); margin-bottom: 14px; }
-.modal-box > p { font-size: .95rem; color: var(--body-c, #3a4a66); line-height: 1.8; margin-bottom: 24px; }
+.modal-box > p { font-size: .95rem; color: var(--body-c, #3a4a66); line-height: 1.8; margin-bottom: 24px; text-align: justify; }
 
 .modal-signs { background: var(--off); border-radius: 14px; padding: 20px 22px; margin-bottom: 28px; }
 .modal-signs-label { display: block; font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--navy2); margin-bottom: 12px; }
