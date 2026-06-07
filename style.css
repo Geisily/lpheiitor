@@ -373,10 +373,12 @@ h2.light { color: var(--white); }
 /* Generic wave dividers between sections */
 .wave-divider { line-height: 0; display: block; }
 .wave-divider svg { width: 100%; display: block; }
-.wave-to-white  { background: var(--navy); }
-.wave-to-off    { background: var(--white); }
-.wave-off-off   { background: var(--off); }
-.wave-off-navy  { background: var(--off); }
+.wave-to-white    { background: var(--navy); }
+.wave-to-off      { background: var(--white); }
+.wave-off-off     { background: var(--off); }
+.wave-off-navy    { background: var(--off); }
+.wave-navy-navy2  { background: var(--navy); }
+.wave-navy2-navy  { background: var(--navy2); }
 
 /* =====================
    SERVICES
@@ -544,10 +546,10 @@ h2.light { color: var(--white); }
    CONTACT
    ===================== */
 .contact {
-  background: var(--navy);
+  background: var(--navy2);
   position: relative;
   overflow: hidden;
-  padding: 100px 0 120px;
+  padding: 80px 0 100px;
 }
 
 .contact-inner { text-align: center; }
@@ -564,8 +566,8 @@ h2.light { color: var(--white); }
 
 .contact-card {
   display: block;
-  background: rgba(255,255,255,.16);
-  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.35);
   border-radius: var(--r);
   padding: 52px 28px;
   transition: background .3s var(--ease), transform .3s var(--ease), border-color .3s var(--ease);
