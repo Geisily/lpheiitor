@@ -274,6 +274,23 @@
     </svg>
   </div>
 
+  <!-- MODAL FAQ -->
+  <div class="doenca-modal" id="faq-modal" role="dialog" aria-modal="true" aria-labelledby="faq-modal-title" hidden>
+    <div class="modal-backdrop" id="faq-modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="faq-modal-close" aria-label="Fechar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-icon" id="faq-modal-icon"></div>
+      <h3 id="faq-modal-title"></h3>
+      <p id="faq-modal-desc"></p>
+      <a href="https://api.whatsapp.com/send/?phone=%2B5513988156002&text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida+sobre+o+atendimento&type=phone_number&app_absent=0" class="btn-modal-wa" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.12 1.524 5.855L0 24l6.336-1.508A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.66-.49-5.2-1.35l-.37-.22-3.84.915.93-3.74-.24-.385A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Falar com o Dr. Heitor
+      </a>
+    </div>
+  </div>
+
   <!-- FAQ -->
   <section class="faq" id="duvidas" aria-label="Dúvidas frequentes">
     <div class="container faq-inner">
@@ -287,30 +304,12 @@
         </a>
       </div>
       <div class="faq-list">
-        <details class="faq-item">
-          <summary>Quais animais o Dr. Heitor atende?<span class="faq-icon">+</span></summary>
-          <p>O atendimento é voltado para cães e gatos com suspeita ou diagnóstico de doenças hormonais e metabólicas. Casos de outras espécies podem ser avaliados individualmente.</p>
-        </details>
-        <details class="faq-item">
-          <summary>O que faz um veterinário endocrinologista?<span class="faq-icon">+</span></summary>
-          <p>É o especialista responsável por diagnosticar e tratar doenças do sistema hormonal dos animais, como diabetes, hipotireoidismo, síndrome de Cushing, doença de Addison e obesidade endócrina.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Como sei se meu pet precisa de um endocrinologista?<span class="faq-icon">+</span></summary>
-          <p>Sinais como sede excessiva, urina frequente, aumento ou perda de peso sem causa aparente, queda de pelo, barriga distendida ou cansaço excessivo são indicativos. O ideal é consultar para investigar.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Vocês acompanham casos de diabetes e insulina?<span class="faq-icon">+</span></summary>
-          <p>Sim. O acompanhamento de cães e gatos diabéticos é um dos principais focos do consultório — incluindo ajuste de dose de insulina, curvas glicêmicas e orientação ao tutor.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Onde é feito o atendimento?<span class="faq-icon">+</span></summary>
-          <p>100% domiciliar. O Dr. Heitor vai até a sua casa em Santos, São Vicente, Praia Grande, Guarujá ou Cubatão. Sem clínica, sem sala de espera.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Como faço para agendar?<span class="faq-icon">+</span></summary>
-          <p>Entre em contato pelo WhatsApp. O agendamento é feito diretamente, de forma rápida e simples, com confirmação de data, horário e endereço.</p>
-        </details>
+        <button class="faq-item" data-faq="animais">Quais animais o Dr. Heitor atende?<span class="faq-icon">›</span></button>
+        <button class="faq-item" data-faq="especialista">O que faz um veterinário endocrinologista?<span class="faq-icon">›</span></button>
+        <button class="faq-item" data-faq="sinais">Como sei se meu pet precisa de um endocrinologista?<span class="faq-icon">›</span></button>
+        <button class="faq-item" data-faq="diabetes">Vocês acompanham casos de diabetes e insulina?<span class="faq-icon">›</span></button>
+        <button class="faq-item" data-faq="local">Onde é feito o atendimento?<span class="faq-icon">›</span></button>
+        <button class="faq-item" data-faq="agendar">Como faço para agendar?<span class="faq-icon">›</span></button>
       </div>
     </div>
   </section>
@@ -402,12 +401,12 @@
           <h3>Instagram</h3>
           <p>@heitorfelippellivet</p>
         </a>
-        <a href="mailto:contato@heitorfelippelli.com.br" class="contact-card">
+        <a href="https://www.google.com/maps/search/Baixada+Santista+SP" class="contact-card" target="_blank" rel="noopener">
           <div class="contact-ico">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           </div>
-          <h3>E-mail</h3>
-          <p>contato@heitorfelippelli.com.br</p>
+          <h3>Atendimento</h3>
+          <p>Santos, São Vicente, Praia Grande, Guarujá e Cubatão</p>
         </a>
       </div>
     </div>

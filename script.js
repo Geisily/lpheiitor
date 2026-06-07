@@ -174,17 +174,68 @@ document.querySelectorAll('.tag[data-doenca]').forEach(btn => {
 
 modalClose.addEventListener('click', closeModal);
 backdrop.addEventListener('click', closeModal);
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+// FAQ Modal
+const faqData = {
+  animais: {
+    icon: '🐾',
+    pergunta: 'Quais animais o Dr. Heitor atende?',
+    resposta: 'O atendimento é voltado para cães e gatos com suspeita ou diagnóstico de doenças hormonais e metabólicas. Casos de outras espécies podem ser avaliados individualmente mediante consulta prévia.'
+  },
+  especialista: {
+    icon: '🩺',
+    pergunta: 'O que faz um veterinário endocrinologista?',
+    resposta: 'É o especialista responsável por diagnosticar e tratar doenças do sistema hormonal dos animais, como diabetes, hipotireoidismo, síndrome de Cushing, doença de Addison e obesidade endócrina. Atua com exames específicos, interpretação hormonal e planos terapêuticos individualizados.'
+  },
+  sinais: {
+    icon: '🔍',
+    pergunta: 'Como sei se meu pet precisa de um endocrinologista?',
+    resposta: 'Sinais como sede excessiva, urina frequente, aumento ou perda de peso sem causa aparente, queda de pelo, barriga distendida ou cansaço excessivo são indicativos. O ideal é consultar um endocrinologista veterinário para investigar a causa hormonal antes que o quadro evolua.'
+  },
+  diabetes: {
+    icon: '💉',
+    pergunta: 'Vocês acompanham casos de diabetes e insulina?',
+    resposta: 'Sim. O acompanhamento de cães e gatos diabéticos é um dos principais focos do consultório — incluindo curvas glicêmicas domiciliares, ajuste de dose de insulina, orientação sobre alimentação e monitoramento contínuo para garantir qualidade de vida ao pet.'
+  },
+  local: {
+    icon: '📍',
+    pergunta: 'Onde é feito o atendimento?',
+    resposta: '100% domiciliar. O Dr. Heitor vai até a sua casa em Santos, São Vicente, Praia Grande, Guarujá ou Cubatão. Sem clínica, sem sala de espera — o atendimento acontece no ambiente em que seu pet se sente mais seguro e confortável.'
+  },
+  agendar: {
+    icon: '📅',
+    pergunta: 'Como faço para agendar?',
+    resposta: 'Entre em contato pelo WhatsApp. O agendamento é feito diretamente, de forma rápida e simples, com confirmação de data, horário e endereço. Basta clicar no botão abaixo e enviar uma mensagem.'
+  }
+};
 
-// FAQ: só uma pergunta aberta por vez
-const faqItems = document.querySelectorAll('.faq-item');
-faqItems.forEach(item => {
-  item.addEventListener('toggle', () => {
-    if (item.open) {
-      faqItems.forEach(other => { if (other !== item) other.open = false; });
-    }
-  });
+const faqModal    = document.getElementById('faq-modal');
+const faqMTitle   = document.getElementById('faq-modal-title');
+const faqMDesc    = document.getElementById('faq-modal-desc');
+const faqMIcon    = document.getElementById('faq-modal-icon');
+const faqMClose   = document.getElementById('faq-modal-close');
+const faqMBack    = document.getElementById('faq-modal-backdrop');
+
+function openFaqModal(key) {
+  const d = faqData[key];
+  if (!d) return;
+  faqMIcon.textContent  = d.icon;
+  faqMTitle.textContent = d.pergunta;
+  faqMDesc.textContent  = d.resposta;
+  faqModal.hidden = false;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeFaqModal() {
+  faqModal.hidden = true;
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.faq-item[data-faq]').forEach(btn => {
+  btn.addEventListener('click', () => openFaqModal(btn.dataset.faq));
 });
+faqMClose.addEventListener('click', closeFaqModal);
+faqMBack.addEventListener('click', closeFaqModal);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closeFaqModal(); } });
 
 // Smooth anchor offset for fixed navbar
 document.querySelectorAll('a[href^="#"]').forEach(a => {
