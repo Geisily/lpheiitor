@@ -376,6 +376,7 @@ h2.light { color: var(--white); }
 .wave-to-white  { background: var(--navy); }
 .wave-to-off    { background: var(--white); }
 .wave-off-off   { background: var(--off); }
+.wave-off-navy  { background: var(--off); }
 
 /* =====================
    SERVICES
@@ -543,15 +544,13 @@ h2.light { color: var(--white); }
    CONTACT
    ===================== */
 .contact {
-  background: linear-gradient(140deg, var(--navy2) 0%, var(--navy) 100%);
+  background: var(--navy);
   position: relative;
   overflow: hidden;
-  padding-bottom: 120px;
+  padding: 100px 0 120px;
 }
-.contact-wave-top { line-height: 0; }
-.contact-wave-top svg { width: 100%; height: 110px; display: block; }
 
-.contact-inner { text-align: center; padding-top: 20px; }
+.contact-inner { text-align: center; }
 .contact-sub { color: rgba(255,255,255,.68); font-size: 1.1rem; margin-top: -38px; margin-bottom: 60px; }
 .contact-inner .section-chip { border: 1px solid rgba(255,255,255,.2); }
 
@@ -750,7 +749,7 @@ h2.light { color: var(--white); }
    FAQ
    ===================== */
 .faq {
-  background: var(--off);
+  background: var(--navy);
   padding: 120px 0;
 }
 
@@ -767,17 +766,18 @@ h2.light { color: var(--white); }
   font-weight: 800;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--navy2);
+  color: var(--blue);
   margin-bottom: 18px;
 }
 
 .faq-left h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 18px;
+  color: var(--white);
 }
 
 .faq-left p {
-  color: var(--body-c, #3a4a66);
+  color: rgba(255,255,255,.72);
   font-size: .95rem;
   line-height: 1.75;
   margin-bottom: 32px;
@@ -787,8 +787,8 @@ h2.light { color: var(--white); }
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  background: var(--navy);
-  color: var(--white);
+  background: var(--yellow);
+  color: var(--navy);
   font-family: 'Nunito', sans-serif;
   font-weight: 800;
   font-size: .9rem;
@@ -796,7 +796,7 @@ h2.light { color: var(--white); }
   border-radius: 100px;
   transition: background .25s, transform .25s;
 }
-.btn-faq:hover { background: var(--navy2); transform: translateY(-2px); }
+.btn-faq:hover { background: #e6c400; transform: translateY(-2px); }
 
 .faq-list { display: flex; flex-direction: column; gap: 12px; }
 
