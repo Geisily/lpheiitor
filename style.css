@@ -378,7 +378,7 @@ h2.light { color: var(--white); }
    ===================== */
 .about {
   padding: 120px 0 0;
-  background: var(--white);
+  background: var(--black);
   position: relative;
   overflow: hidden;
 }
