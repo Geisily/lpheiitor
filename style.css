@@ -507,7 +507,7 @@ h2.light { color: var(--white); }
    SERVIÇOS
    ===================== */
 .services {
-  background: var(#D9E0F0);
+  background:#D9E0F0;
   padding: 100px 0 0;
   position: relative;
   overflow: hidden;
@@ -902,7 +902,7 @@ h2.light { color: var(--white); }
 }
 
 .citybar-label {
-  font-size: .82rem;
+  font-size: .100rem;
   font-weight: 800;
   letter-spacing: .14em;
   text-transform: uppercase;
