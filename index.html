@@ -139,7 +139,7 @@
     </div>
   </section>
 
-  <!-- QUEM SOU EU -->
+<!-- QUEM SOU EU (CORREÇÃO DEFINITIVA: SEM DUPLICADOS E CRACHÁ PARA FORA) -->
   <section class="about" id="quem-sou" aria-label="Quem sou eu">
     <div class="container">
       <div class="about-grid">
@@ -153,11 +153,31 @@
         <div class="about-content">
           <span class="section-chip">Quem Sou Eu</span>
           <h2>Cuidar de animais é<br>mais que uma profissão</h2>
-          <div class="about-mobile-card" aria-hidden="true">
-            <img src="heitor-jaleco-mobile.jpg" alt="+3 anos de especialização" />
+          
+          <!-- Bloco Mobile Corrigido: Estilos inline garantem que ele suma no desktop e o crachá fique para fora -->
+          <div class="about-mobile-card" style="position: relative; margin: 0 auto 40px auto; max-width: 90%;">
+            <style>
+              /* Garante que este bloco específico suma no computador */
+              @media (min-width: 769px) {
+                .about-mobile-card { display: none !important; }
+              }
+              /* Garante que ele apareça apenas no celular */
+              @media (max-width: 768px) {
+                .about-mobile-card { display: block !important; }
+              }
+            </style>
+            
+            <img src="heitor-jaleco-mobile.jpg" alt="Dr. Heitor Felippelli" style="width: 100%; display: block; border-radius: 12px;" />
+            
+            <!-- Crachá Amarelo jogado para fora (Metade para dentro, metade para fora) -->
+            <div style="display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; position: absolute; bottom: -20px; right: -10px; background: #FFD100; padding: 12px 18px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); z-index: 99; text-align: center; min-width: 120px;">
+              <span style="font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.8rem; color: #0E274F; line-height: 1;">+3</span>
+              <span style="font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.65rem; color: #0E274F; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 2px; line-height: 1.2;">anos de<br>especialização</span>
+            </div>
           </div>
+          
           <p>
-             Sou médico veterinário especialista em endocrinologia animal, dedicado a oferecer o melhor cuidado para cães e gatos com desequilíbrios hormonais. Minha missão é unir ciência e empatia para proporcionar qualidade de vida real aos seus pets.
+             Sua médico veterinário especialista em endocrinologia animal, dedicado a oferecer o melhor cuidado para cães e gatos com desequilíbrios hormonais. Minha missão é unir ciência e empatia para proporcionar qualidade de vida real aos seus pets.
           </p>
           <div class="about-stats">
             <div class="stat">
