@@ -507,7 +507,7 @@ h2.light { color: var(--white); }
    SERVIÇOS
    ===================== */
 .services {
-  background:#D9E0F0;
+  background: var(--black);
   padding: 100px 0 0;
   position: relative;
   overflow: hidden;
