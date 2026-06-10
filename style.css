@@ -723,7 +723,7 @@ h2.light { color: var(--white); }
 .contact-form-wrap h3 {
   font-size: 1.5rem;
   font-weight: 900;
-  color: var(--navy);
+  color: var(--navy2);
   margin-bottom: 8px;
 }
 .contact-form-wrap > p {

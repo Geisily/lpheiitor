@@ -259,11 +259,11 @@
     </div>
   </section>
 
-  <!-- ONDA conditions→testimonials -->
+<!-- ONDA conditions→testimonials -->
   <div class="wave-divider wave-to-off" aria-hidden="true">
     <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0,45 C300,90 600,15 900,55 C1100,80 1280,25 1440,50 L1440,110 L0,110 Z" fill="rgba(244,247,252,.45)"/>
-      <path d="M0,65 C240,20 480,100 720,60 C960,20 1200,80 1440,42 L1440,110 L0,110 Z" fill="#f4f7fc"/>
+      <path d="M0,65 C240,20 480,100 720,60 C960,20 1200,80 1440,42 L1440,110 L0,110 Z" fill="#1C4675"/>
     </svg>
   </div>
 
@@ -413,14 +413,18 @@
     </svg>
   </div>
 
+<!-- ========================================================================= -->
+  <!-- SEÇÃO CONTATO, ONDA DIVISÓRIA E INSTAGRAM (VERSÃO ESPELHADA E ENCAIXADA)  -->
+  <!-- ========================================================================= -->
+  
   <!-- CONTATO -->
-  <section class="contact" id="contato">
+  <section class="contact" id="contato" style="margin-bottom: 0 !important; padding-bottom: 0 !important;">
     <div class="container contact-inner">
       <a href="https://api.whatsapp.com/send/?phone=%2B5513988156002&text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta+domiciliar&type=phone_number&app_absent=0" class="section-chip light section-chip--link" target="_blank" rel="noopener">Entre em contato</a>
       <h2 class="light">Fale Conosco</h2>
       <p class="contact-sub">Atendimento domiciliar na Baixada Santista. Preencha o formulário e sua mensagem será enviada direto pelo WhatsApp.</p>
     </div>
-    <div class="contact-body">
+    <div class="contact-body" style="margin-bottom: 0 !important; padding-bottom: 0 !important;">
       <!-- Mapa -->
       <div class="contact-map">
         <iframe
@@ -456,34 +460,37 @@
 
   </main>
 
-<div class="wave-divider" style="background: var(--off); line-height: 0; display: block; overflow: hidden; margin-top: -2px; width: 100%;">
-  <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width: 100%; height: 95px; display: block;">
-    <path d="M0,0L1440,0L1440,60C1320,95,1140,110,960,100C780,90,600,55,420,40C240,25,120,35,0,50Z" style="fill: #1b4572;"></path>
-  </svg>
-</div>
-
-<section style="background: var(--off); padding: 60px 0 60px; width: 100%; display: block; clear: both;">
-  <div class="container" style="max-width: 1240px; width: 100%; margin: 0 auto; padding: 0 20px; box-sizing: border-box; text-align: center;">
-    
-    <span class="section-chip">Instagram</span>
-    <h2 style="margin-bottom: 32px; color: var(--navy); font-size: clamp(1.8rem, 4vw, 2.8rem); text-align: center;">Siga-nos no Instagram</h2>
-    
-    <style>
-      .elfsight-app-09a492a0-5a6a-456d-a8e2-a44d3d4f7cc3 {
-        margin: 0 auto !important;
-        display: block !important;
-        max-width: 1000px !important;
-      }
-      .elfsight-app-09a492a0-5a6a-456d-a8e2-a44d3d4f7cc3 > div {
-        margin: 0 auto !important;
-      }
-    </style>
-
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-09a492a0-5a6a-456d-a8e2-a44d3d4f7cc3" data-elfsight-app-lazy></div>
-
+  <!-- ONDA DE TRANSIÇÃO (CORRIGIDA E ESPELHADA) -->
+  <div class="wave-divider" style="background: #1b4572; line-height: 0; display: block; overflow: hidden; margin-top: -2px; width: 100%;">
+    <!-- O transform: scaleY(-1) vira a onda de cabeça para baixo para encaixar na lógica do fluxo escuro -> claro -->
+    <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width: 100%; height: 95px; display: block; transform: scaleY(-1);">
+      <path d="M0,0L1440,0L1440,60C1320,95,1140,110,960,100C780,90,600,55,420,40C240,25,120,35,0,50Z" style="fill: var(--off);"></path>
+    </svg>
   </div>
-</section>
+
+  <!-- SEÇÃO INSTAGRAM -->
+  <section style="background: var(--off); padding: 40px 0 60px; width: 100%; display: block; clear: both; margin-top: -2px;">
+    <div class="container" style="max-width: 1240px; width: 100%; margin: 0 auto; padding: 0 20px; box-sizing: border-box; text-align: center;">
+      
+      <span class="section-chip">Instagram</span>
+      <h2 style="margin-bottom: 32px; color: var(--navy); font-size: clamp(1.8rem, 4vw, 2.8rem); text-align: center;">Siga-nos no Instagram</h2>
+      
+      <style>
+        .elfsight-app-09a492a0-5a6a-456d-a8e2-a44d3d4f7cc3 {
+          margin: 0 auto !important;
+          display: block !important;
+          max-width: 1000px !important;
+        }
+        .elfsight-app-09a492a0-5a6a-456d-a8e2-a44d3d4f7cc3 > div {
+          margin: 0 auto !important;
+        }
+      </style>
+
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-09a492a0-5a6a-456d-a8e2-a44d3d4f7cc3" data-elfsight-app-lazy></div>
+
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
